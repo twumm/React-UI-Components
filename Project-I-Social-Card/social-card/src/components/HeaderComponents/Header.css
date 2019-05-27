@@ -12,3 +12,13 @@
   margin: 15px;
   width: 40px;
 }
+
+.header-title span {
+  padding: 5px;
+}
+
+.header-title span:nth-child(2),
+.header-title span:nth-child(3) {
+  color: gray;
+  font-size: 14px;
+}
