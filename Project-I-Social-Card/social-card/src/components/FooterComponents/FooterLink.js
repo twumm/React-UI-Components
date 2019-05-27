@@ -14,7 +14,7 @@ class FooterLink extends Component {
 
   linkClickHandler = () => {
     this.setState({
-      clickCount: this.initialState.clickCount++
+      clickCount: this.initialState.clickCount = this.initialState.clickCount + 1
     })
   }
 
@@ -22,7 +22,7 @@ class FooterLink extends Component {
     const { icon, showcount } = this.props;
 
     return (
-      <div>
+      <div className="footer-link">
         <FontAwesomeIcon icon={icon} showcount={showcount} onClick={this.linkClickHandler} />
         <span>
           {showcount ? null : this.state.clickCount}
