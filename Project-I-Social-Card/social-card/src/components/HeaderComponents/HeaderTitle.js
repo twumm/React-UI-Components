@@ -6,6 +6,7 @@ function HeaderTitle({ name, username, date }) {
     <div className='header-title'>
       <span>{name}</span>
       <span>@{username}</span>
+      <span>&bull;</span>
       <span>{date}</span>
     </div>
   )
