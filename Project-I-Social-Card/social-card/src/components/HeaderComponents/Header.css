@@ -2,3 +2,13 @@
 .header-container {
   display: flex;
 }
+
+.image-thumbnail-div {
+  background: black;
+  border-radius: 50%;
+}
+
+.image-thumbnail {
+  margin: 15px;
+  width: 40px;
+}
