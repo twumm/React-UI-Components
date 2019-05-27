@@ -3,12 +3,14 @@ import './App.css';
 import './components/HeaderComponents/HeaderContainer';
 import HeaderContainer from './components/HeaderComponents/HeaderContainer';
 import CardContainer from './components/CardComponents/CardContainer';
+import FooterContainer from './components/FooterComponents/FooterContainer';
 
 const App = () => {
   return (
     <div className='app-main'>
       <HeaderContainer />
       <CardContainer />
+      <FooterContainer />
       {/* <h3>Welcome to React Social Card!</h3>
       <p>
         Begin by exploring the `components` directory. You'll notice we have a
