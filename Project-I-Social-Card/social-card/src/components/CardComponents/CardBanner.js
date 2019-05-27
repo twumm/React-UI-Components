@@ -3,7 +3,7 @@ import './Card.css';
 
 function CardBanner({ imageSrc }) {
   return (
-    <div>
+    <div className='card-banner'>
       <img src={imageSrc} alt="Banner" />
     </div>
   );

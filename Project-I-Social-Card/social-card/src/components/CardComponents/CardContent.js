@@ -3,7 +3,7 @@ import './Card.css';
 
 function CardContent({ title, content, link }) {
   return (
-    <div>
+    <div className='card-content'>
       <h4>{title}</h4>
       <p>{content}</p>
       <p id="link">{link}</p>
