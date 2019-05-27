@@ -9,10 +9,10 @@ library.add(faComment, faRecycle, faHeart, faEnvelope);
 function Footer() {
   return (
     <div className='footer'>
-      <FooterLink icon='comment' />
+      <FooterLink icon='comment' showcount="false" />
       <FooterLink icon='recycle' />
       <FooterLink icon='heart' />
-      <FooterLink icon='envelope' />
+      <FooterLink icon='envelope' showcount="false" />
     </div>
   );
 }

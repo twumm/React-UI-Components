@@ -19,12 +19,14 @@ class FooterLink extends Component {
   }
 
   render()  {
-    const { icon } = this.props;
+    const { icon, showcount } = this.props;
 
     return (
       <div>
-        <FontAwesomeIcon icon={icon} onClick={this.linkClickHandler} />
-        <span>{this.state.clickCount}</span>
+        <FontAwesomeIcon icon={icon} showcount={showcount} onClick={this.linkClickHandler} />
+        <span>
+          {showcount ? null : this.state.clickCount}
+        </span>
       </div>
     );
   }
