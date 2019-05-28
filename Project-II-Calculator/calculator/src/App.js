@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
 
   let tempNumber = 0;
-  const [total, calculateTotal] = useState(1);
+  const [total, calculateTotal] = useState(0);
 
   const getTotal = (symbol) => {
     switch(symbol) {
@@ -22,15 +22,17 @@ const App = () => {
         calculateTotal(total - tempNumber);
         break;
       case '+':
-        calculateTotal(total + tempNumber);
+        calculateTotal(parseInt(total) + parseInt(tempNumber));
         break;
-      case '=':
-        calculateTotal(total + tempNumber);
-        break;
+      // case '=':
+      //   calculateTotal(parseInt(total) + parseInt(tempNumber));
+      //   break;
       default:
         return total;
     }
   }
+
+  // const 
 
   const setTempNumber = (num) => tempNumber = num;
 
