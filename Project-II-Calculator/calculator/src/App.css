@@ -3,3 +3,7 @@
   margin: 40px auto;
   border: 1px solid gray;
 }
+
+.app-container .row {
+  display: flex;
+}
