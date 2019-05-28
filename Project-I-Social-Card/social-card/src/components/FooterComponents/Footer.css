@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-top: 20px; 
+}
+
+.footer-link {
+  margin-right: 40px;
+  font-size: 1em;
+  color: rgb(182, 182, 182);
+}
+
+.footer-link span {
+  padding-left: 8px;
+  color: rgb(187, 187, 187);
+}

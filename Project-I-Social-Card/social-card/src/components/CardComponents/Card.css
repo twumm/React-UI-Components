@@ -1,1 +1,35 @@
 /* All styles for your Card Components live here */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  border-radius: 6px;
+  border: .5px solid rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+.card-banner img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding-left: 10px;
+}
+
+.card-content h4 {
+  margin: 5px 0 5px 0;
+  font-size: 14px;
+}
+
+.card-content p:nth-child(2) {
+  margin: 0 5px 5px 0;
+  font-size: 14px;
+}
+
+.card-content #link {
+  margin-top: 0;
+  font-size: 14px;
+  color: grey;
+}
