@@ -6,12 +6,42 @@ import './App.css';
 
 const App = () => {
 
+  let tempNumber = 1;
+  const [total, calculateTotal] = useState(0);
+
+  const getTotal = (symbol) => {
+    switch(symbol) {
+      case '÷':
+        calculateTotal(total / tempNumber);
+        break;
+      case 'x':
+        calculateTotal(total * tempNumber);
+        break;
+      case '-':
+        calculateTotal(total - tempNumber);
+        break;
+      case '+':
+        calculateTotal(total + tempNumber);
+        break;
+      case '=':
+        calculateTotal(total + tempNumber);
+        break;
+      default:
+        return total;
+    }
+    calculateTotal(total * tempNumber)
+  }
+
+  const setTempNumber = (num) => tempNumber = num;
+
+  // console.log(tempNumber);
+
   const numberList = [7, 8, 9, 4, 5, 6, 1, 2, 3];
   const symbolList = ['÷', 'x', '-', '+', '='];
 
   return (
     <div className="app-container">
-      <CalculatorDisplay display={0} />
+      <CalculatorDisplay display={total} />
       <div className="buttons-container">
         <div className="number-section">
           <ActionButton text={'clear'} buttonStyle='clear-button' />
@@ -20,6 +50,7 @@ const App = () => {
                 <NumberButton
                   key={number}
                   text={number}
+                  setTempNumber={setTempNumber}
                   buttonStyle='number-button'
                 />
               )
@@ -35,6 +66,7 @@ const App = () => {
                   key={symbol}
                   text={symbol}
                   buttonStyle='symbol-button'
+                  getTotal={getTotal}
                 />
               )
             )
