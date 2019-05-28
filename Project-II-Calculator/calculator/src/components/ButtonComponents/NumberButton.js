@@ -1,13 +1,9 @@
 import React from 'react';
 import './Button.css';
 
-export default function NumberButton({ value, buttonWidth }) {
-  // If buttonWidth is provided, set width, else use default width
-  const buttonStyle = {
-    width: buttonWidth ? buttonWidth : '25%', 
-  }
+export default function NumberButton({ value, buttonStyle }) {
 
   return (
-    <span className='number-button' style={buttonStyle}>{value}</span>
+    <button className={buttonStyle}>{value}</button>
   );
 }
