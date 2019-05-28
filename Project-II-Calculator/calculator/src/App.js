@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
 
   let tempNumber = 0;
-  const [total, calculateTotal] = useState(0);
+  let [total, calculateTotal] = useState(0);
 
   const getTotal = (symbol) => {
     switch(symbol) {
@@ -24,26 +24,23 @@ const App = () => {
       case '+':
         calculateTotal(parseInt(total) + parseInt(tempNumber));
         break;
-      // case '=':
-      //   calculateTotal(parseInt(total) + parseInt(tempNumber));
-      //   break;
       default:
         return total;
     }
   }
 
-  // const 
+  const clearDisplay = () => {
+    console.log('clear')
+    total = 0};
 
   const setTempNumber = (num) => tempNumber = num;
-
-  // console.log(tempNumber);
 
   const numberList = [7, 8, 9, 4, 5, 6, 1, 2, 3];
   const symbolList = ['÷', 'x', '-', '+', '='];
 
   return (
     <div className="app-container">
-      <CalculatorDisplay display={total} />
+      <CalculatorDisplay display={total} clearDisplay={clearDisplay} />
       <div className="buttons-container">
         <div className="number-section">
           <ActionButton text={'clear'} buttonStyle='clear-button' />
