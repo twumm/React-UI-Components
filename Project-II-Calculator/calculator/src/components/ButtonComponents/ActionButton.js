@@ -4,6 +4,6 @@ import './Button.css';
 export default function ActionButton({ text, buttonStyle }) {
 
   return (
-    <button className={buttonStyle}>{text}</button>
+    <input className={buttonStyle} value={text} readOnly />
   );
 }
