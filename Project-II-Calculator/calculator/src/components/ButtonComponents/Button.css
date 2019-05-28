@@ -1,38 +1,38 @@
 .number-button {
   height: 50px;
-  display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
   border: .5px solid black;
   background: white;
   color: black;
-  width: 25%;
+  width: 32.96%;
   font-weight: bold;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .symbol-button {
   height: 50px;
-  display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
   border: .5px solid black;
   background: rgb(131, 21, 21);
   color: white;
-  width: 25%;
+  width: 100%;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .clear-button, 
 .zero-button {
   height: 50px;
-  display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
   border: .5px solid black;
   background: white;
   color: black;
-  width: 75%; 
+  width: 100%;
+  cursor: pointer;
 }
 
 .clear-button {
