@@ -1,21 +1,78 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay';
+import NumberButton from './components/ButtonComponents/NumberButton';
+import ActionButton from './components/ButtonComponents/ActionButton';
 import './App.css';
 
 const App = () => {
+
+  let tempNumber = 0;
+  let [total, calculateTotal] = useState(0);
+
+  const getTotal = (symbol) => {
+    switch(symbol) {
+      case '÷':
+        calculateTotal(total / tempNumber);
+        console.log(typeof total)
+        break;
+      case 'x':
+        calculateTotal(total * tempNumber);
+        break;
+      case '-':
+        calculateTotal(total - tempNumber);
+        break;
+      case '+':
+        calculateTotal(parseInt(total) + parseInt(tempNumber));
+        break;
+      default:
+        return total;
+    }
+  }
+
+  const clearDisplay = () => {
+    console.log('clear')
+    total = 0};
+
+  const setTempNumber = (num) => tempNumber = num;
+
+  const numberList = [7, 8, 9, 4, 5, 6, 1, 2, 3];
+  const symbolList = ['÷', 'x', '-', '+', '='];
+
   return (
-    <div>
-      <h3>Welcome to React Calculator</h3>
-      <p>
-        We have given you a starter project. You'll want to build out your
-        components in their respective files, remove this code and replace it
-        with the proper components.
-      </p>
-      <p>
-        <strong>
-          Don't forget to `default export` your components and import them here
-          inside of this file in order to make them work.
-        </strong>
-      </p>
+    <div className="app-container">
+      <CalculatorDisplay display={total} clearDisplay={clearDisplay} />
+      <div className="buttons-container">
+        <div className="number-section">
+          <ActionButton text={'clear'} buttonStyle='clear-button' />
+          {numberList.map(number => 
+              (
+                <NumberButton
+                  key={number}
+                  text={number}
+                  setTempNumber={setTempNumber}
+                  buttonStyle='number-button'
+                />
+              )
+            )
+          }
+          <ActionButton text={0} buttonStyle='zero-button' />
+        </div>
+
+        <div className="symbol-section">
+          {symbolList.map(symbol => 
+              (
+                <NumberButton
+                  key={symbol}
+                  text={symbol}
+                  buttonStyle='symbol-button'
+                  getTotal={getTotal}
+                />
+              )
+            )
+          }
+        </div>
+      </div>
+      
     </div>
   );
 };

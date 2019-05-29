@@ -1,0 +1,14 @@
+.calculator-display {
+  height: 50px;
+  background: black;
+  color: white;
+  display: flex;
+}
+
+.calculator-display h1 {
+  width: 100%;
+  text-align: right;
+  padding-right: 10px;
+  margin: 0;
+  align-self: flex-end;
+}
